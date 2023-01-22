@@ -1,60 +1,34 @@
 # Boas vindas ao repositório do projeto Trybesmith!
 
-Para realizar o projeto, atente-se a cada passo descrito a seguir, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
 
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
-# Termos e acordos
+  ## O que foi desenvolvido 👨‍💻 
 
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta e do Manual da Pessoa Estudante da Trybe.
-
-# Entregáveis
-
-<details>
-  <summary><strong>🤷🏽‍♀️ Como entregar</strong></summary><br />
-
-  Para entregar o seu projeto você deverá criar um *Pull Request* neste repositório.
-
-  Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/fe827a71-3222-4b4d-a66f-ed98e09961af/day/35e03d5e-6341-4a8c-84d1-b4308b2887ef/lesson/573db55d-f451-455d-bdb5-66545668f436) e nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/) sempre que precisar!
-</details>
-
-<details>
-  <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
-
-  Para este projeto, você vai criar uma loja de itens medievais, no formato de uma _API_, utilizando _Typescript_.
+  Para este projeto, você foi criado uma loja de itens medievais, no formato de uma _API_, utilizando _Typescript_.
   
-  Você irá desenvolver todas as camadas da aplicação (_Models_, _Service_ e _Controllers_) em seu código e, por meio dessa aplicação, será possível realizar as operações básicas que se pode fazer em um determinado banco de dados:
-  Criação, Leitura, Atualização e Exclusão (ou `CRUD`, para as pessoas mais íntimas 😜 - _Create, Read, Update_ e _Delete_).
+  A aplicação possui alguns _endpoints_ que irão ler e escrever em um banco de dados, utilizando o **MySQL**, nela será possível realizar as operações básicas que se pode fazer em um determinado banco de dados: Criação, Leitura, Atualização e Exclusão (CRUD - Create, Read, Update e Delete).
 
-  Você irá criar alguns _endpoints_ que irão ler e escrever em um banco de dados, utilizando o **MySQL**.
+  Alem disso foi utilizado para desenvolver todas as camadas da aplicação a arquitetura MSC (Models, Service e Controllers).
 
+  Foi utilizado:
+
+    TypeScript,
+    Node,
+    Express,
+    Docker,
+    MySQL,
+    Joi,
+    JWT.
   ---
 
-  O código para cadastro de pessoas usuárias deve ser criado por você utilizando os conhecimentos adquiridos nesse bloco.
 
-  ⚠️ **Dicas Importantes** ⚠️:
-
-  - Não haverá front-end neste projeto, portanto não se preocupe com a visualização, apenas com as funcionalidades e organização do código;
-
-  - Sua API deve ser desenvolvida dentro da pasta `./src`.
-</details>
-
-<details>
-  <summary><strong>🗓 Data de Entrega</strong></summary><br />
-  
-  * Este projeto é individual
-  * Serão `2` dias de projeto
-  * Data para entrega regular do projeto: `16/01/2023 14:00`
-
-</details>
-
-# Orientações específicas deste projeto
+## Orientações específicas deste projeto
 
 
 <details>
   <summary><strong>🐳 Rodando no Docker vs Localmente</strong></summary><br />
 
-  ## Com Docker
+  ### Com Docker
 
 
   > Rode os serviços `node` e `db` com o comando `docker-compose up -d`.
@@ -71,8 +45,6 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   ⚠ Atenção ⚠ O **git** dentro do container não vem configurado com suas credenciais. Faça os commits fora do container, ou configure as suas credenciais do git dentro do container.
 
-  ⚠ Atenção ⚠ Não rode o comando npm audit fix! Ele atualiza várias dependências do projeto, e essa atualização gera conflitos com o avaliador.
-
   ⚠ Atenção ⚠ Caso você esteja usando macOS e ao executar o `docker-compose up -d` se depare com o seguinte erro:
 
   ~~~bash
@@ -87,21 +59,14 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 > As soluções foram com base [nesta fonte](https://stackoverflow.com/a/69636473).
 
 
-
-✨ **Dica:** A extensão `Remote - Containers` (que estará na seção de extensões recomendadas do VS Code) é indicada para que você possa desenvolver sua aplicação no container Docker direto no VS Code, como você faz com seus arquivos locais.
-
-<img src="images/remote-container.png" width="800px" >
-
 ---
 
-  ## Sem Docker
+  ### Sem Docker
 
   > Instale as dependências [**Caso existam**] com `npm install`
 
-  ⚠ Atenção ⚠ Não rode o comando npm audit fix! Ele atualiza várias dependências do projeto, e essa atualização gera conflitos com o avaliador.
-
   ✨ **Dica:** Para rodar o projeto desta forma, obrigatoriamente você deve ter o `node` instalado em seu computador.
-  ✨ **Dica:** O avaliador espera que a versão do `node` utilizada seja a 16.
+ 
 
 </details>
 <details>
@@ -139,7 +104,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
     password: process.env.MYSQL_PASSWORD
   ```
 
-  **⚠️ Existe um arquivo já criado chamado .env.example onde estão listadas as variáveis de ambiente esperadas no projeto. Variáveis de ambiente além das especificadas no arquivo mencionado não são suportadas, pois não são esperadas pelo avaliador do projeto. ⚠️**
+  **⚠️ Existe um arquivo já criado chamado .env.example onde estão listadas as variáveis de ambiente esperadas no projeto. ⚠️**
 
   **⚠️ É essencial que seu arquivo tenha o nome `connection.ts` e esteja no diretório `src/models` ⚠️**
 
@@ -186,60 +151,6 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
 </details>
 
-# Orientações que você ja conhece :wink:
-
-
-<details>
-  <summary><strong>‼️ Antes de começar a desenvolver</strong></summary><br />
-
-  1. Clone o repositório
-
-  - `git clone git@github.com:tryber/sd-023-b-project-trybesmith.git`.
-  - Entre na pasta do repositório que você acabou de clonar:
-    - `cd sd-023-b-project-trybesmith`
-
-  2. Instale as dependências [**Caso existam**]
-
-  - `npm install`
-
-  3. Crie uma branch a partir da branch `main`
-
-  - Verifique se você está na branch `main`
-    - Exemplo: `git branch`
-  - Se você não estiver, mude para a branch `main`
-    - Exemplo: `git checkout main`
-  - Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
-    - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    - Exemplo: `git checkout -b joaozinho-sd-023-b-project-trybesmith`
-
-  4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-
-  - Verifique que as mudanças ainda não estão no _stage_
-    - Exemplo: `git status` (deve aparecer listada a pasta _joaozinho_ em vermelho)
-  - Adicione o novo arquivo ao _stage_ do Git
-      - Exemplo:
-        - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        - `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
-  - Faça o `commit` inicial
-      - Exemplo:
-        - `git commit -m 'iniciando o projeto x'` (fazendo o primeiro commit)
-        - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-  5. Adicione a sua branch com o novo `commit` ao repositório remoto
-
-  - Usando o exemplo anterior: `git push -u origin joaozinho-sd-023-b-project-trybesmith`
-
-  6. Crie um novo `Pull Request` _(PR)_
-
-  - Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-023-b-project-trybesmith/pulls)
-  - Clique no botão verde _"New pull request"_
-  - Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  - Clique no botão verde _"Create pull request"_
-  - Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  - **Não se preocupe em preencher mais nada por enquanto!**
-  - Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-023-b-project-trybesmith/pulls) e confira que o seu _Pull Request_ está criado
-
-</details>
 <details>
    <summary><strong>🎛 Linter</strong></summary><br />
 
@@ -254,60 +165,14 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
   ⚠️ Pull requests com issues de linter não serão avaliadas. Atente-se para resolvê-las antes de finalizar o desenvolvimento! ⚠️
 
   </details>
-  <details>
-  <summary><strong>⌨️ Durante o desenvolvimento</strong></summary><br />
-
-  - Faça `commits` das alterações que você fizer no código regularmente
-
-
-  - Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
-
-
-  - Os comandos que você utilizará com mais frequência são:
-    1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-    2. `git add` _(para adicionar arquivos ao stage do Git)_
-    3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-    4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-    5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
-
-</details>
-<details>
-<summary><strong>🤝 Depois de terminar o desenvolvimento (opcional)</strong></summary><br />
-
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
-
-- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-
-  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-023-b`.
-
-Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
-</details>
-
-<details>
-  <summary><strong>🕵🏿 Revisando um pull request</strong></summary><br />
-
-  Use o conteúdo sobre [Code Review](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21-382e-4588-8950-3b1a29afd2dd/section/b3af2f05-08e5-4b4a-9667-6f5f729c351d/lesson/36268865-fc46-40c7-92bf-cbded9af9006) para te ajudar a revisar os _Pull Requests_.
-
-</details>
-
+ 
 <details>
   <summary><strong>🍪 Informações sobre a API </strong></summary><br />
   
-  **⚠️ Leia as informações abaixo atentamente e siga à risca o que for pedido. ⚠️**
-
-  **👀 Observações importantes:**
-
-  - O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação;
 
   - O projeto deve rodar na porta **3000**;
 
   - O arquivo `index.ts` existe para rodar corretamente os testes. Toda a chamada de rotas do projeto deverá ser feita dentro do arquivo `app.ts`; 
-
 
   ---
 
@@ -323,47 +188,13 @@ Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362
 
   ---
 
-  Há dois arquivos no diretório `./src/`: `index.ts` e `app.ts`, **ambos não devem ser renomeados ou apagados**. 
-
-  Você poderá fazer modificações em ambos os arquivos, porém **no arquivo `app.ts` o seguinte trecho de código não deve ser removido**:
-
-  ```typescript
-  import express from 'express';
-
-  const app = express();
-
-  app.use(express.json());
-
-  export default app;
-  ```
-
-  Isso está configurado para o avaliador funcionar corretamente.
-
 </details>
 
-## Quando finalizar o projeto não esquecer
-<details>
-  <summary><strong>🗣 Nos dê feedbacks sobre o projeto!</strong></summary><br />
+  ---
 
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. 
-**Leva menos de 3 minutos!**
+## Requisitos
 
-[FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
-
-⚠️ **O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?**
-
-</details>
-
-<details>
-  <summary><strong>🗂 Compartilhe seu portfólio!</strong></summary><br />
-
-  Você sabia que o LinkedIn é a principal rede social profissional e compartilhar o seu aprendizado lá é muito importante para quem deseja construir uma carreira de sucesso? Compartilhe esse projeto no seu LinkedIn, marque o perfil da Trybe (@trybe) e mostre para a sua rede toda a sua evolução.
-
-</details>
-
-# Requisitos
-
-## 1 - Crie um endpoint para o cadastro de produtos
+### 1 - Crie um endpoint para o cadastro de produtos
 
 - O endpoint deve ser acessível através do caminho (`/products`);
 
@@ -392,14 +223,11 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
         "amount": "30 peças de ouro",
       }
     ```
-
-
-
 </details>
 
 ---
 
-## 2 - Crie um endpoint para a listagem de produtos
+### 2 - Crie um endpoint para a listagem de produtos
 
 - O endpoint deve ser acessível através do caminho (`/products`);
 
@@ -431,7 +259,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 
 ---
 
-## 3 - Crie um endpoint para o cadastro de pessoas usuárias
+### 3 - Crie um endpoint para o cadastro de pessoas usuárias
 
 - O endpoint deve ser acessível através do caminho (`/users`);
 
@@ -461,20 +289,14 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
     }
     ```
 
-
-
 </details>
 
 ---
 
-## 4 - Crie um endpoint para listar todos os pedidos
+### 4 - Crie um endpoint para listar todos os pedidos
 
 - O endpoint deve ser acessível através do caminho (`/orders`).
 - Essa rota deve retornar todos os pedidos e os `id`s dos produtos associados a estes.
-
-✨ **Dica:** Todos os produtos são itens artesanais, portanto, únicos. Por isso são os produtos que contêm os `id`s dos pedidos.
-
-✨ **Dica:** Pesquise na documentação oficial do **MySQL** sobre a função de agregação `JSON_ARRAYAGG`, ela pode ser bem útil. 😉
 
 <details close>
   <summary>Além disso, as seguintes verificações serão feitas:</summary>
@@ -503,7 +325,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 
 ---
 
-## 5 - Crie um endpoint para o login de pessoas usuárias
+### 5 - Crie um endpoint para o login de pessoas usuárias
 
 - O endpoint deve ser acessível através do caminho (`/login`).
 
@@ -565,9 +387,9 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 
 ---
 
-## Requisitos Bônus
+### Requisitos Bônus
 
-## 6 - Crie as validações dos produtos
+### 6 - Crie as validações dos produtos
 
 - Vamos realizar as validações referentes a criação do endpont do requisito 1?
 
@@ -626,7 +448,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 
 ---
 
-## 7 - Crie as validações para as pessoas usuárias
+### 7 - Crie as validações para as pessoas usuárias
 
 - Vamos realizar as validações referentes a criação do endpont do requisito 3?
 
@@ -722,88 +544,6 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
   <br>
 
 
-</details>
-
----
-
-## 8 - Crie um endpoint para o cadastro de um pedido
-
-- O endpoint deve ser acessível através do caminho (`/orders`);
-
-- Um pedido só pode ser criado caso a pessoa usuária esteja logada e o token `JWT` validado;
-
-- Os pedidos enviados devem ser salvos na tabela `orders` do banco de dados, salvando `id` da pessoa usuária da aplicação que fez esse pedido. 
-
-- A tabela `products` também deve ser alterada, atualizando todos os produtos com os `id` incluídos na chave `productsIds` da requisição, e adicionando nesses produtos o `orderId` do pedido recém criado;
-
-- O endpoint deve receber a seguinte estrutura:
-```json
-  {
-    "productsIds": [1, 2]
-  }
-```
-
-**⚠️ Ao cadastrar um pedido, lembre-se de atualizar os respectivos produtos no banco de dados, incluindo neles o número do pedido criado.**
-
-<details close>
-  <summary>Além disso, as seguintes verificações serão feitas:</summary>
-
-  <br>
-
-  > 👉 Para token
-  - **[Será validado que não é possível cadastrar pedidos sem token]**
-    - Se o token não for informado, o resultado retornado deverá ser um _status http_ `401` e
-    ```json
-      { "message": "Token not found" }
-    ```
-
-  - **[Será validado que não é possível cadastrar um pedido com token inválido]**
-    - Se o token informado não for válido, o resultado retornado deverá ser um _status http_ `401` e
-    ```json
-      { "message": "Invalid token" }
-    ```
-
-  <br>
-
-  > 👉 Para products
-  - **[Será validado que o campo "productsIds" é obrigatório]**
-    - Se o corpo da requisição não possuir o campo "productsIds", o resultado retornado deverá ser um _status http_ `400` e
-    ```json
-      { "message": "\"productsIds\" is required" }
-    ```
-
-  - **[Será validado que não é possível criar um pedido com o campo "productsIds" não sendo um array]**
-    - Se o valor do campo "productsIds" não for um array, o resultado retornado deverá ser um _status http_ `422` e
-    ```json
-      { "message": "\"productsIds\" must be an array" }
-    ```
-
-  - **[Será validado que não é possível cadastrar um pedido se o campo "productsIds" for um array vazio]**
-    - Se o campo "productsIds" possuir um array vazio, o resultado retornado deverá ser um _status http_ `422` e
-    ```json
-      { "message": "\"productsIds\" must include only numbers" }
-    ```
-
-  <br>
-
-  > 👉 Para caso os dados sejam enviados corretamente
-  - **[Será validado que é possível criar um pedido com sucesso com 1 item]**
-    - O resultado retornado para cadastrar um pedido com sucesso deverá ser conforme exibido abaixo, com um _status http_ `201`:
-    ```json
-      {
-        "userId": 1,
-        "productsIds": [1],
-      }
-    ```
-
-  - **[Será validado que é possível criar um pedido com sucesso com vários itens]**
-    - O resultado retornado para cadastrar um pedido com sucesso deverá ser conforme exibido abaixo, com um _status http_ `201`:
-    ```json
-      {
-        "userId": 1,
-        "productsIds": [1, 2]
-      }
-    ```
 </details>
 
 ---
