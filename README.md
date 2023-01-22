@@ -4,7 +4,7 @@
 
   ## O que foi desenvolvido 👨‍💻 
 
-  Para este projeto, você foi criado uma loja de itens medievais, no formato de uma _API_, utilizando _Typescript_.
+  Para este projeto, foi criado uma loja de itens medievais, no formato de uma _API_, utilizando _Typescript_.
   
   A aplicação possui alguns _endpoints_ que irão ler e escrever em um banco de dados, utilizando o **MySQL**, nela será possível realizar as operações básicas que se pode fazer em um determinado banco de dados: Criação, Leitura, Atualização e Exclusão (CRUD - Create, Read, Update e Delete).
 
