@@ -12,15 +12,15 @@
 
   Foi utilizado:
 
-    TypeScript,
-    Node,
-    Express,
-    Docker,
-    MySQL,
-    Joi,
-    JWT.
-  ---
+    - TypeScript,
+    - Node,
+    - Express,
+    - Docker,
+    - MySQL,
+    - Joi,
+    - JWT.
 
+  ---
 
 ## Orientações específicas deste projeto
 
