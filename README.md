@@ -162,7 +162,6 @@
 
   Você pode também instalar o plugin do `ESLint` no `VSCode`. Para isso, basta fazer o download do [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) e instalá-lo.
 
-  ⚠️ Pull requests com issues de linter não serão avaliadas. Atente-se para resolvê-las antes de finalizar o desenvolvimento! ⚠️
 
   </details>
  
@@ -191,7 +190,7 @@
 </details>
 
   ---
-
+ <!-- 
 ## Requisitos
 
 ### 1 - Crie um endpoint para o cadastro de produtos
@@ -547,3 +546,4 @@
 </details>
 
 ---
+-->
